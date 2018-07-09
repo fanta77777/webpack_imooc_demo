@@ -11,6 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^1.0.0",
+    "less": "^3.5.3",
+    "less-loader": "^4.1.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8"

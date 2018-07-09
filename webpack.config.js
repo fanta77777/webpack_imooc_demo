@@ -11,18 +11,31 @@ module.exports = {
     module:{
         rules:[
             {
-                test:/\.css$/,
+                test:/\.less$/,
                 use:[
                     {
-                        loader:'style-loader/useable',
+                        loader:'style-loader',
                         options:{
-                            insertInto:'#app'
+                            insertInto:'#app',
+                            singleton:true,
+                            transform:'./css.transform.js'
                         }
                     },
                     {
-                        loader:'css-loader'
+                        loader:'css-loader',
+                        options:{
+                            modules:true,
+                            localIdentName:'[path][name]+[local]-[hash:base64:5]'
+                        }
+                    },
+                    {
+                        loader:'less-loader'
                     }
                 ]
+            },
+            {
+                test:/\.less$/,
+
             }
         ]
     }
